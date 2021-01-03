@@ -1,0 +1,14 @@
+service: adotee-me-aws-api
+frameworkVersion: "2"
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-mocha-plugin
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+functions:
+  hello:
+    handler: ./services/handler.hello
